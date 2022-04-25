@@ -1,0 +1,47 @@
+l1. if you want to declare any tag just write directly h1 and if you want to write and text between tag add space 
+   and then write text at the end we write in pug template will converted to html and in pug template 
+   you do not have to end any tag 
+
+ex. html >> <h1>Hello</h1>
+    pug >> h1 hello
+
+
+2. if you want to add any element as child then use indentation
+
+ex. html >> <div>
+              <h1>Hello</h1>
+            </div>
+
+    pug >> div
+             h1 hello
+
+3. if you want to add any attribute inside any html tag
+
+ex. 
+html>> <link rel="stylesheet" href="css/style.css"></link>
+
+pug>>  link(rel='stylesheet' href='css/style.css')
+
+
+4. you can also access value from response then 
+ -1st way h1= tour
+ -2nd way h1 #{tour}
+
+5. write javascript inside pug template directly
+
+pug>> - const x=9;
+      h2= 2 * x  
+
+6.if you want to add element with class & attribute & Text
+
+ex. 
+html >> <h1 class="header-title" bold="true">hello</h1>
+pug  >> h1.header-title(bold='true') hello
+
+7. If you want to separate all diffrent section to diffrent file
+and then you wnat to merge this into single file you can also do this.
+
+create diffrent file then write code for example we have header design
+that we first write into "_header.pug" and then I need to use this inside 
+"base.pug" so where i have to display this code header code 
+there i just have to write "include _header"
